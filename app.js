@@ -19,31 +19,18 @@ const getRandomData = (dataset) => {
     return dataset[Math.floor(Math.random() * dataset.length)]
 }
 
-
-
 const passwordGenerator = (password = "" ) => {
-
     if(upperInput.checked) {
-
         password += getRandomData(upperCase);
     }
-
     if(lowerInput.checked) {
-
         password += getRandomData(lowerCase);
-
     }
-
     if(numberInput.checked) {
-
         password += getRandomData(numbers);
-
     }
-
     if(symbolInput.checked) {
-
         password += getRandomData(specialCharacter);
-
     }
 
     // is mae mane recursive function ko use kia hai ku k yae or loop dono same kam kar rahe hai ishe liye mane truncate string ko use kia hai warna yahe chezz loop say bhe ho sakti hai recursive bohat important role play karta hai like code less do more thats why i use it loop code ko lamba lay jata
@@ -55,8 +42,6 @@ const passwordGenerator = (password = "" ) => {
     displayBox.innerText = truncateString(password,characterCount.value)
     
 } 
-
-
 
 document.getElementById("btn").addEventListener(
     "click",
@@ -88,4 +73,34 @@ sliderValue.textContent = characterCount.value;
 characterCount.addEventListener('input', ()=>{
     sliderValue.textContent = characterCount.value;
 });
-console.log(sliderValue);
+
+
+// Auto Generate Code 
+function autoPassword() {
+    // Auto Generate Password
+    const length = 8;
+    const pwdgen = upperCase + lowerCase + numbers + specialCharacter;
+  
+    let password = "";
+    password += upperCase[Math.floor(Math.random() * upperCase.length)];
+    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+    password += numbers[Math.floor(Math.random() * numbers.length)];
+    password += specialCharacter[Math.floor(Math.random() * specialCharacter.length)];
+  
+    while (length > password.length) {
+      password += pwdgen[Math.floor(Math.random() * pwdgen.length)];
+    }
+    displayBox.innerHTML = password;
+}
+autoPassword();
+
+function copyPassword() {
+  const displayBox = document.getElementById('pass-box');
+  const range = document.createRange();
+  range.selectNode(displayBox);
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand("copy");
+  }
+  copyPassword();
