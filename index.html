@@ -15,7 +15,7 @@
         
         <div class="box">
             <div class="author"><b>Made By Ali Haider ❤️ </b></div>
-            <span id="pass-box">Nu9}Sg9(Pu4>V</span>
+            <span id="pass-box"></span>
             <div class="row">
                 <div class="left">
                     Password Length
@@ -32,7 +32,7 @@
                     </div>
                 </label>
                 <div class="right">
-                    <input type="checkbox" name="" id="upper-case" checked/>
+                    <input type="checkbox" name="" id="upper-case"/>
                 </div>
             </div>
             <div class="row">
@@ -69,7 +69,16 @@
                 <button id="btn">
                     Generate Password 
                 </button>
+            
             </div>
+            <button id="btn" onclick="copyPassword()">
+                Copy Password
+            </button>
+
+            <button id="btn" onclick="autoPassword()">
+              Auto Generate
+            </button>
+            
         </div>
     </div>
     <script src="./app.js"></script>
