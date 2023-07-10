@@ -19,7 +19,7 @@ input:focus-visible {
 }
 
 .box {
-    min-width: 400px;
+    width: 400px;
     padding: 10px;
     box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
@@ -29,6 +29,7 @@ input:focus-visible {
 
 #pass-box {
     width: 100%;
+    overflow: hidden;
     display: block;
     background-color: white;
     font-size: 30px;
