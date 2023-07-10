@@ -66,3 +66,13 @@ label {
     margin-top : 20px;
     font-size: 24px;
 }
+img {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 37%;
+    right: 38%;
+}
+#btn {
+    margin: 10px;
+}
