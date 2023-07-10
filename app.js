@@ -43,7 +43,7 @@ const passwordGenerator = (password = "" ) => {
     
 } 
 
-document.getElementById("btn").addEventListener(
+document.getElementById("btn-1").addEventListener(
     "click",
     function() {
         passwordGenerator();
