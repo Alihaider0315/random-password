@@ -60,6 +60,17 @@ label {
     margin-top: 10px;
     border-radius: 5px;
 }
+#btn-1 {
+    width: 100%;
+    font-size: 20px;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    background-color: #34495e;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+}
 .author {
     text-align: center;
     margin-bottom: 20px;
