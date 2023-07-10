@@ -77,22 +77,18 @@ characterCount.addEventListener('input', ()=>{
 
 // Auto Generate Code 
 function autoPassword() {
-    // Auto Generate Password
     const length = 8;
     const pwdgen = upperCase + lowerCase + numbers + specialCharacter;
-  
     let password = "";
-    password += upperCase[Math.floor(Math.random() * upperCase.length)];
-    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-    password += numbers[Math.floor(Math.random() * numbers.length)];
-    password += specialCharacter[Math.floor(Math.random() * specialCharacter.length)];
   
-    while (length > password.length) {
+    for (let i = 0; i < length; i++) {
       password += pwdgen[Math.floor(Math.random() * pwdgen.length)];
     }
+  
     displayBox.innerHTML = password;
-}
-autoPassword();
+  }
+  
+  autoPassword();
 
 function copyPassword() {
   const displayBox = document.getElementById('pass-box');
